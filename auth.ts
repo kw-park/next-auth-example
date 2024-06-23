@@ -68,6 +68,10 @@ const config = {
     // Dropbox,
     // Facebook,
     GitHub,
+    // GitHub({
+    //   clientId: process.env.GITHUB_ID || "",
+    //   clientSecret: process.env.GITHUB_SECRET || "",
+    // }),    
     // GitLab,
     // Google,
     // Hubspot,
