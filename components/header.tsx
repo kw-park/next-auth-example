@@ -1,12 +1,16 @@
-import { MainNav } from "./main-nav"
+import { LogoNav } from "./main-nav"
 import UserButton from "./user-button"
 
 export default function Header() {
   return (
-    <header className="sticky flex justify-center border-b">
-      <div className="flex items-center justify-between w-full h-16 max-w-3xl px-4 mx-auto sm:px-6">
-        <MainNav />
-        <UserButton />
+    <header className="flex w-full">
+      <div className="flex w-full">
+        <div className="flex w-40 gap-2">
+          <LogoNav />
+        </div>
+        <div className="flex w-full gap-6 justify-end">
+          <UserButton />
+        </div>        
       </div>
     </header>
   )

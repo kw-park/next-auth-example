@@ -16,20 +16,59 @@ import {
 import React from "react"
 import { Button } from "./ui/button"
 
-export function MainNav() {
+export function LogoNav() {
   return (
-    <div className="flex gap-4 items-center">
+    <div className="flex gap-4">
       <CustomLink href="/">
         <Button variant="ghost" className="p-0">
           <Image
             src="/logo.png"
             alt="Home"
-            width="32"
-            height="32"
+            width="30"
+            height="30"
             className="min-w-8"
           />
+          <span className="p-1">WAIFace</span>
         </Button>
       </CustomLink>
+    </div>
+  )
+}
+
+export function LeftNav() {
+  return (
+    <div className="flex gap-1 px-5 flex-col">
+      <CustomLink href="/logs">
+        <Button variant="ghost" className="p-0">
+          <Image
+            src="/logs.png"
+            alt="Logs"
+            width="30"
+            height="30"
+            className="min-w-8"
+          />
+          <span className="p-1">Logs</span>
+        </Button>
+      </CustomLink>
+      <CustomLink href="/docs">
+        <Button variant="ghost" className="p-0">
+          <Image
+            src="/docs.png"
+            alt="Docs"
+            width="30"
+            height="30"
+            className="min-w-8"
+          />
+          <span className="p-1">Docs</span>
+        </Button>
+      </CustomLink>      
+    </div>
+  )
+}   
+
+export function MainNav() {
+  return (
+    <div className="flex gap-4">
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>

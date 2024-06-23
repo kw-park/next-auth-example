@@ -3,25 +3,35 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import Footer from "@/components/footer"
 import Header from "@/components/header"
+import { LeftNav } from "@/components/main-nav"
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "NextAuth.js Example",
+  title: "WAIFace",
   description:
-    "This is an example site to demonstrate how to use NextAuth.js for authentication",
+    "This is an WAIFace dashboard",
 }
 
 export default function RootLayout({ children }: React.PropsWithChildren) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark h-full bg-gray-50">
       <body className={inter.className}>
-        <div className="flex flex-col justify-between w-full h-full min-h-screen">
+        <div className="flex w-full">
           <Header />
-          <main className="flex-auto w-full max-w-3xl px-4 py-4 mx-auto sm:px-6 md:py-6">
-            {children}
-          </main>
-          <Footer />
+        </div>
+        <div className="flex w-full">
+          <div className="flex w-40 gap-2">
+            <LeftNav />
+          </div>
+          <div className="flex w-full gap-6 justify-end">
+              <div className="flex w-full max-h-screen flex-col gap-2">
+                <main className="flex-auto w-full max-w-3xl px-4 py-4 mx-auto sm:px-6 md:py-6">
+                  {children}
+                </main>
+                <Footer />
+            </div>
+          </div>
         </div>
       </body>
     </html>

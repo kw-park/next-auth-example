@@ -11,7 +11,7 @@ import "next-auth/jwt"
 // import Discord from "next-auth/providers/discord"
 // import Dropbox from "next-auth/providers/dropbox"
 // import Facebook from "next-auth/providers/facebook"
-// import GitHub from "next-auth/providers/github"
+import GitHub from "next-auth/providers/github"
 // import GitLab from "next-auth/providers/gitlab"
 // import Google from "next-auth/providers/google"
 // import Hubspot from "next-auth/providers/hubspot"
@@ -20,7 +20,7 @@ import "next-auth/jwt"
 // import Netlify from "next-auth/providers/netlify"
 // import Okta from "next-auth/providers/okta"
 // import Passage from "next-auth/providers/passage"
-// import Passkey from "next-auth/providers/passkey"
+import Passkey from "next-auth/providers/passkey"
 // import Pinterest from "next-auth/providers/pinterest"
 // import Reddit from "next-auth/providers/reddit"
 // import Slack from "next-auth/providers/slack"
@@ -67,7 +67,7 @@ const config = {
     // Discord,
     // Dropbox,
     // Facebook,
-    // GitHub,
+    GitHub,
     // GitLab,
     // Google,
     // Hubspot,
@@ -75,15 +75,15 @@ const config = {
     // LinkedIn,
     // Netlify,
     // Okta,
-    // Passkey({
-    //   formFields: {
-    //     email: {
-    //       label: "Username",
-    //       required: true,
-    //       autocomplete: "username webauthn",
-    //     },
-    //   },
-    // }),
+    Passkey({
+      formFields: {
+        email: {
+          label: "Username",
+          required: true,
+          autocomplete: "username webauthn",
+        },
+      },
+    }),
     // Passage,
     // Pinterest,
     // Reddit,
